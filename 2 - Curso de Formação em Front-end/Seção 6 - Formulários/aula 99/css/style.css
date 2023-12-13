@@ -1,0 +1,9 @@
+body{
+    padding-bottom: 500px;
+}
+div{
+    margin-bottom: 10px;
+}
+div inpuit, div label {
+    display: block;
+}
