@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h2>Formulários HTML</h2>
+    <form action="register.php" method="GET">
+        <div>
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome">
+        </div>
+        <div>
+            <label for="age">Idade: </label>
+            <input type="text" name="age">
+        </div>
+        <div>
+            <label for="job">Selecione a sua profissão: </label>
+            <select name="job" id="">
+                <option value="programador">Programador</option>
+                <option value="tester">Tester/QA</option>
+                <option value="devops">DevOps</option>
+            </select>
+        </div>
+        <div>
+            <label for="contract">Você leu os termos do contrato?</label>
+            <select name="contract">
+                <option value="sim">Sim</option>
+                <option value="nao" selected>Não</option>
+            </select>
+        </div>
+        <div>
+            <label for="items">Selecione os itens desejados: </label>
+            <select name="items" multiple>
+                <option value="pera">Pêra</option>
+                <option value="feijao">Feijão</option>
+                <option value="arroz">Arroz</option>
+                <option value="milho">Milho</option>
+            </select>
+        </div>
+        <div>
+            <label for="comment">Escreva abaixo o que voce achou do post: </label>
+            <textarea name="comment" cols="30" rows="10"></textarea>
+        </div>
+        <div>
+            <fieldset>
+                <legend>Preencha as suas informações: </legend>
+                <label for="firstname">Nome: </label>
+                <input type="text" name="firstname">
+                <label for="lastname">Sobrenome: </label>
+                <input type="text" name="lastname">
+            </fieldset>
+        </div>
+        <div>
+            <label for="flavor">Escolha o sabor: </label>
+            <input type="text" name="flavor" list="flavors">
+            <datalist id="flavors">
+                <option value="Cereja"></option>
+                <option value="Morango"></option>
+                <option value="Abacaxi"></option>
+                <option value="Chocolate"></option>
+            </datalist>
+        </div>
+        <div>
+            <label for="password">Digite sua senha: </label>
+            <input type="password" name="password">
+        </div>
+        <div>
+            <label for="car-model">Escolha o modelo do seu carro: </label>
+            <div class="radio">
+                <input type="radio" value="bmw" name="car-model">
+                <label for="bmw">BMW</label>
+            </div>
+            <div class="radio">
+                <input type="radio" value="ferrari" name="car-model">
+                <label for="ferrari">Ferrari</label>
+            </div>
+            <div class="radio">
+                <input type="radio" value="ford" name="car-model">
+                <label for="ford">Ford</label>
+            </div>
+        </div>
+        <div>
+            <label for="optionals">Opcionais do carro: </label>
+            <div class="radio">
+                <input type="checkbox" name="optionals[]" value="big-tires">
+                <label for="big-tires">Pneus Grandes</label>
+            </div>
+            <div class="radio">
+                <input type="checkbox" name="optionals[]" value="tubo-engine">
+                <label for="tubo-engine">Motor Turbo</label>
+            </div>
+            <div class="radio">
+                <input type="checkbox" name="optionals[]" value="hybrid">
+                <label for="hybrid">Híbrido</label>
+            </div>
+        </div>
+        <div>
+            <label for="birthday">Data de Aniversário</label>
+            <input type="date" name="birthday">
+        </div>
+        <div>
+            <label for="image">Insira a sua imagem</label>
+            <input type="file" name="image">
+        </div>
+        <div>
+            <label for="salary">Quanto voce ganha no seu emprego atual?</label>
+            <input type="number" name="salary">
+        </div>
+        <div>
+            <label for="email">Qual seu e-mail?</label>
+            <input type="email" name="email">
+        </div>
+        <div>
+            <label for="value">Digite algum valor: </label>
+            <input type="text" value="O meu valor é este">
+        </div>
+        <div>
+            <p>tente mudar o valor: </p>
+            <input type="text" value="Não precisa preencher" disabled>
+        </div>
+
+        <input type="reset" value="Limpar">
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
