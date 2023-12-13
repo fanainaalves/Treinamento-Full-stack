@@ -1,0 +1,10 @@
+.color-name{
+    background-color: black;
+    color: yellowgreen;
+    opacity: 0.2;
+}
+.color-name2{
+    background-color: rgb(200, 20, 40);
+    color: #00eaff;
+    opacity: 0.9;
+}

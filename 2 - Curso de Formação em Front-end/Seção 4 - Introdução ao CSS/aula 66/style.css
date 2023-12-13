@@ -1,0 +1,13 @@
+.borda-esquerda{
+    border-left: 2px solid red;
+}
+.borda-bottom{
+    border-bottom: 2px dotted blue;
+}
+.borda-top{
+    border-top: 2px dotted greenyellow;
+}
+.borda-direita{
+    border-right: 2px dotted rgb(255, 0, 149);
+}
+

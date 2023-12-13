@@ -1,0 +1,13 @@
+.without-border-box{
+    background-color: #444;
+    color: white;
+    width: 400px;
+    padding: 50px;
+}
+.border-box{
+    background-color: #666;
+    color: white;
+    width: 400px;
+    padding: 50px;
+    box-sizing: border-box;
+}

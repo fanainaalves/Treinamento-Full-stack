@@ -1,0 +1,14 @@
+.padding-individual{
+    background-color: #111;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+    padding-right: 15px;
+}
+
+.shorthand-padding{
+    background-color: #111;
+    color: white;
+    padding: 10px, 20px;
+}

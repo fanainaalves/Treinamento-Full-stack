@@ -1,0 +1,10 @@
+.withoutPadding{
+    background-color: #111;
+    color: white;
+}
+.padding{
+background-color: #111;
+color: white;
+padding: 20px;
+border: 1px solid red;
+}

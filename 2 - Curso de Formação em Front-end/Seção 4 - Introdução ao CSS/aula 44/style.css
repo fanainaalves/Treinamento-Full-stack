@@ -1,0 +1,12 @@
+.h1{
+    color: rgb(146, 201, 120);
+    background-color: black;
+    font-weight: bolder;
+    height: 30pt;
+    
+}
+.paragrafo {
+    background-color: black;
+    color: aqua;
+    padding: 15px;
+}

@@ -1,0 +1,9 @@
+.color-name, .color-name2{
+    background-image: url(./img/bridge.jpg);
+    height: 400px;
+    width: 400px;
+}
+
+.color-name{
+    background-size: cover;
+}

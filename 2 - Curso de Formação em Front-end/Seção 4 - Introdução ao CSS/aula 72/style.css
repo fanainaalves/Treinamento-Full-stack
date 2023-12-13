@@ -1,0 +1,6 @@
+.upperCase{
+    text-transform: uppercase;
+}
+.lowerCase{
+    text-transform: lowercase;
+}

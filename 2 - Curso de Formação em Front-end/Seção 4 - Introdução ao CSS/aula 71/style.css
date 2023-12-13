@@ -1,0 +1,9 @@
+.underline{
+    text-decoration: underline;
+}
+.line-trough{
+    text-decoration: line-through;
+}
+.remove-underline{
+    text-decoration: none;
+}

@@ -1,0 +1,22 @@
+.margem{
+    margin: 10px;
+    border: 1px solid blue;
+
+}
+.margem-top{
+    margin-top: 10px;
+    border: 1px solid blue;
+}
+.margem-embaixo{
+    margin-bottom: 10px;
+    border: 1px solid blue;
+}
+.margem-esquerda{
+    margin-left: 10px;
+    border: 1px solid blue;
+}
+.margem-direita{
+    margin-right: 10px;
+    border: 1px solid blue;
+}
+

@@ -1,0 +1,9 @@
+.fixed{
+    width: 100px;
+    height: 100px;
+    background-color: #851;
+    border: 1px solid blue;
+    position: fixed;
+    top: 50px;
+    right: 50px;
+}
