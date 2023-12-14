@@ -1,0 +1,12 @@
+body{
+    padding-bottom: 500px;
+}
+.flex{
+    display: flex;
+    background-color: #ddd;
+}
+.flex-column{
+    display: flex;
+    background-color: #ccc;
+    flex-direction: column;
+}

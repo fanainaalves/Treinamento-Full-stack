@@ -1,0 +1,78 @@
+body{
+    padding-bottom: 500px;
+}
+.flex{
+    display: flex;
+    background-color: #ddd;
+    margin-bottom: 20px;
+}
+.flex-column{
+    display: flex;
+    background-color: #ccc;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.flexwrap{
+    display: flex;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+.box{
+    height: 40px;
+    width: 33%;
+    border: 1px solid purple;
+}
+.center, .space-around, .space-between, .end{
+    display: flex;
+    margin-bottom: 20px;
+}
+.center .box, .space-around .box, 
+.space-between  .box, .end .box{
+    width: 50px;
+}
+.center{
+    justify-content: center;
+}
+
+.space-around{
+    justify-content: space-around;
+}
+.space-between{
+    justify-content: space-between;
+}
+
+
+.align-center, .flex-end, .strech{
+    display: flex;
+    margin-bottom: 20px;
+    height: 200px;
+    border: 1px solid red;
+}
+.align-center .box, .flex-end .box, 
+.strech .box{
+    width: 50px;
+}
+.align-center{
+    align-items: center;
+    justify-content: center;
+}
+.flex-end{
+    align-items: flex-end;
+}
+.strech{
+    align-items: stretch;
+}
+.strech .box{
+    height: auto;
+}
+
+.gap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid blue;
+    gap: 10px;
+}
+.gap .box {
+    width: 32%;
+}
