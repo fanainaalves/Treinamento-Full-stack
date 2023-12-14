@@ -1,0 +1,19 @@
+h1{
+    color: red;
+}
+
+@media screen and (max-width: 500px){
+    h1{
+        color: blue;
+    }
+}
+p{
+    background-color: red;
+    color: black;
+}
+@media screen and (min-width: 800px){
+    p{
+        background-color: black;
+        color: red;
+    }
+}
