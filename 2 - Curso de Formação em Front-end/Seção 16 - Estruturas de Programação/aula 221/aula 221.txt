@@ -1,0 +1,5 @@
+Salvando valores na memória
+* Até então nao estavamos colocando os valores nas expressões de console;
+* Porém isso nao é tão comum no mundo real, nós precisamos utilizar variáveis;
+* Que são como containers, que salvam informações para quando precisamos utilizar;
+* Termos como declarar variáveis com let e const;
