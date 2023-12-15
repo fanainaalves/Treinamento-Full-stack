@@ -1,0 +1,5 @@
+Onde o JavaScript é utilizado?
+* Interação com a página, HTML, e CSS através do DOM;
+* Calculo, manipulação, e validação de dados;
+* Também é empregada no server-side, com Node.js;
+* As principais bibiliotecas de Front-end são baseadas em JS(exemplos: React, Vue, Angular, Svelte...)

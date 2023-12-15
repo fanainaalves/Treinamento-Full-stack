@@ -1,0 +1,7 @@
+O que é JavaScript?
+* Linguagem de programação de Alto Nível;
+* Recebeu o nome por causa da Linguagem JAVA que estava na hype;
+* Diferenças entre: JavaScript X Vanilla JavaScript;
+* Sua principal função é dar vida a páginas da internet;
+* Adicionando comportamentos (alteração/inserção de HTML e CSS) através de eventos;
+* Case Sensitive;

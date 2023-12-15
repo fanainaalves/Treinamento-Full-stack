@@ -1,0 +1,7 @@
+Formas de Executar JavaScript
+
+* Há diversas formas de executar JavaScript;
+* Padrão:; arquivo importado no HTML;
+* Diretamente no navegador, através do Console;
+* Por meio de aplicações como o JS Fiddie;
+* Vamos entender cada uma delas!
