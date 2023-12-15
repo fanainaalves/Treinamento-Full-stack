@@ -1,0 +1,9 @@
+O que são tipos de dados?
+* É a forma de classificar um dado:
+* Temos como dado: "Matheus", 15, true, [];
+* Os tipos de dados mais comuns são:
+    - Number;
+    - String;
+    - Boolean;
+    - Empty values (null, undefined);
+    - Object;
