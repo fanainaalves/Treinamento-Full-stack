@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <title>Gerador de Box Shadow</title>
+</head>
+<body>
+    <div id="box-shadow-generator">
+        <div id="controls-container">
+            <h2>Configurações da Box Shadow:</h2>
+            <div class="form-control">
+                <div class="range-input">
+                    <label for="horizontal">Deslocamento horizontal: </label>
+                    <input type="range" id="horizontal" min="-100" max="100" value="5">                   
+                </div>
+                <div class="reference-input">
+                    <input type="text" id="horizontal-value" name="horizontal-value">
+                    <p>px</p>
+                </div>
+            </div>
+            <div class="form-control">
+                <div class="range-input">
+                    <label for="vertical">Deslocamento vertical: </label>
+                    <input type="range" id="vertical" min="-100" max="100" value="5">
+                    
+                </div>
+                <div class="reference-input">
+                    <input type="text" id="vertical-value" name="vertical-value">
+                    <p>px</p>
+                </div>
+            </div>
+            <div class="form-control">
+                <div class="range-input">
+                    <label for="blur">Intensidade do Borrão (Blur): </label>
+                    <input type="range" id="blur" min="-100" max="100" value="10">
+                </div>
+                <div class="reference-input">
+                    <input type="text" id="blur-value" name="blur-value">
+                    <p>px</p>
+                </div>
+            </div>
+            <div class="form-control">
+                <div class="range-input">
+                    <label for="spread">Intensidade do Espalhamento (Spread): </label>
+                    <input type="range" id="spread" min="-100" max="100" value="5">
+                </div>
+                <div class="reference-input">
+                    <input type="text" id="spread-value" name="spread-value">
+                    <p>px</p>
+                </div>
+            </div>
+        </div>
+        <div id="preview">
+            <h2>Preview do efeito gerado:</h2>
+            <div id="box"></div>
+        </div> 
+    </div>
+    <div id="generated-rule">
+        <h2>Copie e cole no seu arquivo de CSS: </h2>
+        <div id="rules-area">
+            <p id="rule">box-shadow: <span></span>;</p>
+            <p id="webkit-rule">-webkit-box-shadow: <span></span>;</p>
+            <p id="moz-rule">-moz-box-shadow: <span></span>;</p>
+        </div>
+    </div>
+</body>
+</html>
