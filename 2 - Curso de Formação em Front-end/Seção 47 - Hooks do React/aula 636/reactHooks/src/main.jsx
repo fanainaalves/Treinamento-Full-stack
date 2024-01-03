@@ -3,12 +3,10 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 
-import Home from './routes/Home.jsx'
-import Contact from './routes/Contact.jsx'
+import Home from "./routes/Home.jsx"
+import Contact from "./routes/Contact.jsx"
 
-import { CounterContextProvide } from './context/CounterContext.jsx'
-
-import { TitleColorContextProvider } from './context/TitleColorContext.jsx'
+import HookUseContext from './components/HookUseContext.jsx'
 
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 
@@ -30,12 +28,11 @@ const router = createBrowserRouter([
 
 ])
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <CounterContextProvide>
-      <TitleColorContextProvider>
-        <RouterProvider router={router} />
-      </TitleColorContextProvider>
-    </CounterContextProvide>
-  </React.StrictMode>
+    <HookUseContext>
+      <RouterProvider router={router} />
+    </HookUseContext>
+  </React.StrictMode>,
 )
