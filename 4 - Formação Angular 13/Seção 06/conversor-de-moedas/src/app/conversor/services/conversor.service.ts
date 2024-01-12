@@ -1,0 +1,46 @@
+import { Injectable } from '@angular/core';
+// Importamos o HttpClient ao invés do Http para o Angular 7
+//import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
+import { Conversao, ConversaoResponse } from '../models';
+
+@Injectable()
+export class ConversorService {
+  // Nova url do fixer.io, que adiciona o parâmetro access_key, que é a chave de autenticação
+  //private readonly BASE_URL = "http://api.fixer.io/latest";
+  private readonly BASE_URL = "http://data.fixer.io/api/latest?access_key=e019e254af039f6384d2589b057599d9";
+
+  constructor(private http: HttpClient) { }
+
+  converter(conversao: Conversao): Observable<any> {
+    // Na linha abaixo altere a '?' por '&'
+    let params = `&base=${conversao.moedaDe}&symbols=${conversao.moedaPara}`;
+    return this.http.get(this.BASE_URL + params);
+
+    // No Angular 6 as duas próximas linha não são mais necessárias
+    //.map(response => response.json() as ConversaoResponse)
+    //.catch(error => Observable.throw(error));
+  }
+
+  cotacaoPara(conversaoResponse: ConversaoResponse, conversao: Conversao): number {
+    if (conversaoResponse === undefined) {
+      return 0;
+    }
+    return conversaoResponse.rates[conversao.moedaPara];
+  }
+
+  cotacaoDe(conversaoResponse: ConversaoResponse, conversao: Conversao): string {
+    if (conversaoResponse === undefined) {
+      return '0';
+    }
+    return (1 / conversaoResponse.rates[conversao.moedaPara]).toFixed(4);
+  }
+
+  dataCotacao(conversaoResponse: ConversaoResponse): string {
+    if (conversaoResponse === undefined) {
+      return '';
+    }
+    return conversaoResponse.date;
+  }
+}
