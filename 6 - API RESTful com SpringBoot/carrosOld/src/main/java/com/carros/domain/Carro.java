@@ -1,8 +1,9 @@
 package com.carros.domain;
 
-import jakarta.persistence.*;
 import lombok.*;
+import jakarta.persistence.*;
 
+@NoArgsConstructor
 @Entity
 @Data
 public class Carro {

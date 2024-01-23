@@ -1,17 +1,22 @@
 package com.carros;
 
+import com.carros.api.exception.ObjectNotFoundException;
 import com.carros.domain.Carro;
 import com.carros.domain.CarroService;
 import com.carros.domain.dto.CarroDTO;
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
 import java.util.Optional;
-
 import static org.junit.jupiter.api.Assertions.*;
+//import static junit.framework.TestCase.*;
 
+@RunWith(SpringRunner.class)
 @SpringBootTest
 public class CarroServiceTest {
 	@Autowired
@@ -19,7 +24,8 @@ public class CarroServiceTest {
 	@Test
 	public void testSave() {
 		Carro carro = new Carro();
-		carro.setNome("Ferrari");
+//		carro.setId(Long.valueOf(31));
+		carro.setNome("Porshe");
 		carro.setTipo("esportivos");
 
 		CarroDTO c = service.insert(carro);
@@ -28,18 +34,22 @@ public class CarroServiceTest {
 		assertNotNull(id);
 
 		//Buscar o Objeto
-		Optional<CarroDTO> op = service.getCarroById(id);
-		assertTrue(op.isPresent());
+		c = service.getCarroById(id);
+		assertNotNull(c);
 
-		c = op.get();
-		assertEquals("Ferrari", c.getNome());
+		assertEquals("Porshe", c.getNome());
 		assertEquals("esportivos", c.getTipo());
 
 		//Deletar o objeto criado por id
 		service.delete(id);
 
 		//Verificar se deletou o objeto
-		assertFalse(service.getCarroById(id).isPresent());
+		try {
+			service.getCarroById(id);
+			fail("O carro não foi excluído");
+		}catch(ObjectNotFoundException e){
+			//ok
+		}
 	}
 
 	@Test
@@ -57,9 +67,7 @@ public class CarroServiceTest {
 
 	@Test
 	public void testGet(){
-		Optional<CarroDTO> op =  service.getCarroById(11L);
-		assertTrue(op.isPresent());
-		CarroDTO c= op.get();
+		CarroDTO c =  service.getCarroById(11L);
 		assertNotNull(c);
 		assertEquals("Ferrari FF", c.getNome());
 	}
